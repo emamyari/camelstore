@@ -29,7 +29,7 @@ export const Navbar = () => {
 						<li><a href="#">Ayarlar</a></li>
 						<li><a href="#exit">Çıkış yap</a></li>
 					</ul>
-				</li> */}
+				</li> */} 
 			</ul>
 			{/* <form className="navbar-form navbar-right search-form" role="search">
 				<input type="text" className="form-control" placeholder="Search" />
