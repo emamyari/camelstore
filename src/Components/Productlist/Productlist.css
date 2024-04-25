@@ -1,0 +1,18 @@
+.divbtn{
+display: flex;
+}
+
+  .btn-green{
+    margin: auto;
+      font-size: 18px;
+    border-radius: 25px;
+    width: 40px;
+
+}
+
+.btn-red{
+    margin: auto;
+    font-size: 18px;
+    border-radius: 25px;
+    width: 40px;
+}  
