@@ -4,6 +4,7 @@ import './Productlist.css'
 export const Productlist = (props) => {
     const [state, setSate] = useState([])
     const [Plist, setPlist] = useState([])
+
     useEffect(
         () => {
             reload()
@@ -11,23 +12,44 @@ export const Productlist = (props) => {
 
     )
 
-    function inc(title){
+    function inc(title) {
 
-        let product=Plist.filter(p=>p.name==title)[0]
-        
-        if(product==null){
-            product={name:title,count:1};
-        }else{
+        let product = Plist.filter(p => p.name == title)[0]
+
+        if (product == null) {
+            product = { name: title, count: 1 };
+        } else {
             product.count++;
         }
-        let lst=[];
-        lst=Plist.filter(p=>p.name!=title)
+        let lst = [];
+        lst = Plist.filter(p => p.name != title)
         lst.push(product);
         setPlist(lst)
     }
-    function dec(title){
+    function dec(title) {
+
+        let product = Plist.filter(p => p.name == title)[0]
+        if (product == null) {
+
+        } else {
+            product.count--;
+        }
+        let lst = [];
+        lst = Plist.filter(p => p.name != title)
+        if (product != null) {
+            if (product.count != 0) {
+                lst.push(product);
+            }
+        }
+        setPlist(lst)
+
+
+    }
+
+    function pr() {
         console.log(Plist)
     }
+
     function reload() {
 
         var requestOptions = {
@@ -67,8 +89,9 @@ export const Productlist = (props) => {
 
                                     </div>
                                     <div className='divbtn'>
-                                        <button onClick={()=>inc(c.product_name)} className='btn btn-success mx-auto btn-green' >+</button>
-                                        <button onClick={()=>dec(c.product_name)}  className='btn btn-danger mx-auto btn-red'>-</button>
+                                        <button onClick={() => inc(c.product_name)} className='btn btn-success mx-auto btn-green' >+</button>
+                                        <button onClick={() => dec(c.product_name)} className='btn btn-danger mx-auto btn-red'>-</button>
+                                        <button onClick={() => pr()} className='btn btn-danger mx-auto btn-red'>print</button>
                                     </div>
                                 </div>
                             </div>
