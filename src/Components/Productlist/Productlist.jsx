@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { Navbar } from '../Navbar/Navbar'
 import './Productlist.css'
 export const Productlist = (props) => {
     const [state, setSate] = useState([])
@@ -9,7 +10,6 @@ export const Productlist = (props) => {
         () => {
             reload()
         }, []
-
     )
 
     function inc(title) {
@@ -65,6 +65,8 @@ export const Productlist = (props) => {
     }
 
     return (
+        <div>
+            <Navbar plist={Plist}></Navbar>
         <div >
             <div className="container">
                 <div className="row">
@@ -105,6 +107,7 @@ export const Productlist = (props) => {
 
 
 
+        </div>
         </div>
     )
 }

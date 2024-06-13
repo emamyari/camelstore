@@ -15,13 +15,11 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Navbar/>  
         <Routes>
         <Route path="/" element={<Shop/>} />
         <Route path="/men" element={<Productlist category={8}/>} />
         <Route path="/women" element={<Productlist category={4}/>} />
         <Route path="/kid" element={<Productlist category={1}/>} />
-
 
         </Routes>
 
