@@ -16,7 +16,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-        <Route path="/" element={<Shop/>} />
+        <Route path="/" element={<div><Navbar plist={[]} ></Navbar><Shop/></div>} />
         <Route path="/men" element={<Productlist category={8}/>} />
         <Route path="/women" element={<Productlist category={4}/>} />
         <Route path="/kid" element={<Productlist category={1}/>} />
