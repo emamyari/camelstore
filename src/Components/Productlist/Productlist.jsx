@@ -63,7 +63,7 @@ export const Productlist = (props) => {
             .then(result => setSate(result.data.data))
             .catch(error => console.log('error', error));
 
-       fetch("http://127.0.0.1:8000/sabad/", requestOptions)
+       fetch("http://192.168.1.56:8000/sabad/", requestOptions)
             .then(response => response.json())
             .then(result => setPlist(result))
             .catch(error => console.log('error', error));
